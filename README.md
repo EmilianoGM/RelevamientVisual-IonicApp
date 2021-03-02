@@ -1,4 +1,5 @@
 # Relevamiento visual
+Aplicación móvil para android utilizando la cámara del dispositivo.
 ## Consigna
 - Ingresar un usuario. (registrado en BD)
 - Seleccionar un BOTÓN de dos posibles (Cosas LINDAS del edificio, Cosas FEAS del edificio).
