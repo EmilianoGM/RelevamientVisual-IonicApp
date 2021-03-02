@@ -1,0 +1,85 @@
+/*
+<p>{{imagen.usuario}}</p>
+    <p>{{imagen.fecha}}</p>
+    <p>{{imagen.tipo}}</p>
+    <p>{{imagen.url}}</p>
+    <br>
+*/
+ion-content {
+    --background: #fff url("../../assets/fondoHome.png") no-repeat center center / cover;
+  }
+  
+.customCard{
+    font-family: 'Cinzel';
+    color: white;
+    --background: url("../../assets/fondoCard.png") no-repeat center center / cover;   
+    font-style: normal;
+    //padding: 5px;
+    //--border-radius: 15px !important;
+    border: 5px solid #E2A9BE;
+    border-radius: 15px;
+    //width: 80%;
+}
+
+.customContent{
+    padding: 0px;
+    height: 30%;
+}
+
+.noPadding{
+    padding: 0px;
+}
+.container {
+    height: 100%;
+    //width: 85%;
+    position: relative;
+    border: 2px solid red;
+}
+  
+.center {
+    height:auto;
+    //height: 60%;
+    width: 90%;
+    border: 2px solid green;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.hideDisplay{
+    display: none !important;
+}
+
+.customMensaje {
+    text-align:center;
+    font-size: 1.4em;
+}
+
+.customDiv{
+    width: 80%;
+    margin: 20px auto;
+}
+.vertical-center {
+    //height: 80%;
+    //width: 90%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+/*
+.customImage{
+    
+    height: 200px;
+}*/
+
+
+.usuario{
+    text-align: center;
+    color: white;
+    font-size: 1em;
+}

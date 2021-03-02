@@ -1,0 +1,49 @@
+ion-content {
+  --background: #fff url("../../assets/fondoHome.png") no-repeat center center / cover;
+}
+
+.container{
+  display: flex !important;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.centrar{
+  margin: auto;
+}
+
+.buttonDiv{
+  margin: auto;
+  height: 45%;
+  width: 90%;
+}
+
+
+.buttonCustom {
+  width: 100%;
+  height: 100%;
+  font-family: 'Cinzel';
+  font-size: 5em;
+}
+
+.buttonCustomTop{
+  color: #000000;
+  background-image: url("../../assets/buttonClean.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.buttonCustomBottom{
+  color: #ffffff;
+  background-image: url("../../assets/buttonDirty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 10px;
+}
+
+/*.buttonCustomDos {
+  height: 60%;
+}*/

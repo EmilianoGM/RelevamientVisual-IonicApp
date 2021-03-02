@@ -1,0 +1,69 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="titleSize ion-text-center">Iniciar sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding bigSize" scroll="false">
+  <!-- Comienzo container centrado -->
+  <div class="contentContainer">
+    <!-- Comienzo formulario de loggin -->
+    <form class="customForm" [formGroup]="validations_form" (ngSubmit)="loggearUsuario(validations_form.value)">
+      <!-- Ion Item ingreso email -->
+      <ion-item lines="none">
+        <ion-label class ="customLabel" position="floating" color="primary">Correo</ion-label>
+        <ion-input class="customInput" lines=“none” type="text" formControlName="email"></ion-input>
+        <div class="errorDivisor">
+          <ng-container *ngFor="let validation of validation_messages.email">
+            <div class="errorMessage" 
+              *ngIf="validations_form.get('email').hasError(validation.type) && (validations_form.get('email').dirty || validations_form.get('email').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </ion-item>
+      <!-- Ion Item ingreso clave -->
+      <ion-item>
+        <ion-label class="customLabel" position="floating" color="primary">Contraseña</ion-label>
+        <ion-input class="customInput" type="password" formControlName="password" required></ion-input>
+        <div class="errorDivisor">
+          <ng-container *ngFor="let validation of validation_messages.password">
+            <div class="errorMessage" 
+              *ngIf="validations_form.get('password').hasError(validation.type) && (validations_form.get('password').dirty || validations_form.get('password').touched)">
+              {{ validation.message }}
+            </div>
+          </ng-container>
+        </div>
+      </ion-item>
+      <!-- Botones ingreso y menú usuarios -->
+      <ion-button class="submitButton" expand="full" type="submit" [disabled]="!validations_form.valid">INGRESAR</ion-button>
+      <ion-button class="submitButton" expand="full" (click)='openMenu()'>Usuarios</ion-button>
+      <label class="error-message">{{errorMessage}}</label>
+    </form>
+    <!-- Fin formulario de loggin -->
+
+    <!-- Comienzo Menu despliegue de usuarios -->
+    <ion-menu side="start" menuId="first" contentId="main">
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>Usuarios</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content id="main">
+        <ion-list>
+          <ion-item class="clickable ion-activatable"button (click)="precargarUsuario(1)">Administrador</ion-item>
+          <ion-item class="clickable ion-activatable"button (click)="precargarUsuario(2)">Invitado</ion-item>
+          <ion-item class="clickable ion-activatable"button (click)="precargarUsuario(3)">Usuario</ion-item>
+          <ion-item class="clickable ion-activatable"button (click)="precargarUsuario(4)">Anonimo</ion-item>
+          <ion-item class="clickable ion-activatable"button (click)="precargarUsuario(5)">Tester</ion-item>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <!-- Fin Menu despliegue de usuarios -->
+
+    <!-- Imagen autoajustable parte inferior -->
+    <div class="customImage middle"></div>
+
+  </div>
+  <!-- Fin container centrado -->
+</ion-content>

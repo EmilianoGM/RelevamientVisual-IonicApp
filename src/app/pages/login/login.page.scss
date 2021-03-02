@@ -1,0 +1,73 @@
+.customForm > ion-item{
+    --highlight-height: 0;
+    font-style: normal;
+    //border: 1px solid red;
+}
+
+.submitButton {
+    padding: 1px;
+    font-size: 150%;
+}
+
+.titleSize{
+    font-size: 150%;
+}
+
+.customForm{
+    //max-height: 80%;
+    //height: 60%;
+    font-style: normal;
+}
+
+.customLabel{
+    font-style: italic;
+    font-size: 120%;
+}
+
+.customInput {
+    border-bottom: 2px solid;
+    border-color: #9A1750;
+    font-size: 300%;
+    font-style: normal;
+}
+
+.customForm >.item-highlight{
+    background-color: transparent !important;
+    display: none !important;
+}
+
+.errorDivisor{
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.errorMessage{
+    font-style: oblique;
+    padding: 0.5em;
+    border: 1px solid red;
+    color: red;
+    text-align:center;
+    //margin-left:auto;
+    //margin-right:auto;
+    margin-top: 1em;
+    //font-family: 'FreeMono', monospace;
+    font-size: 0.9em;
+    //border: 1px solid red;
+}
+
+.customImage{
+    background-image: url( "../../assets/edificiosBanner.png");
+    background-size: cover;
+    width: 100% !important;
+    height:auto;
+}
+
+.contentContainer{
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+.middle {
+    flex-grow: 1 !important;
+}

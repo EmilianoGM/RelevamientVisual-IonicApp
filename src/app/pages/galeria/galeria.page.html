@@ -1,0 +1,29 @@
+<ion-content>
+  <!-- Comienzo container centrado -->
+    <div class="customDiv">
+      <!-- Comienzo grilla de imagenes -->
+      <div *ngFor="let imagen of listaImagenesOrdenada | async">
+        <ion-card class="customCard">
+          <div class="usuario">Admin</div>
+          <img class="customImage" [src]="imagen.url">
+          <ion-card-content class="customContent">
+            <div [ngClass]="{hideDisplay: !imagen.voto}" class="customDiv">
+              <p class="customMensaje">¡Tu voto fue registrado!</p>
+            </div>
+            <ion-grid [ngClass]="{hideDisplay: imagen.voto}" class="noPadding">
+              <ion-row class="noPadding">
+                <ion-col class="noPadding" size=6>
+                  <ion-button (click)="imagen.voto = true" color="primary" expand="block"><ion-icon name="thumbs-up-outline"></ion-icon></ion-button>
+                </ion-col>
+                <ion-col class="noPadding" size=6>
+                  <ion-button (click)="imagen.voto = true" color="danger" expand="block"><ion-icon name="thumbs-down-outline"></ion-icon></ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>   
+        </ion-card>
+      </div>
+      <!-- Fin grilla de imagenes -->
+    </div>
+    <!-- Fin container centrado -->
+</ion-content>
